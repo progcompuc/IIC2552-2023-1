@@ -1,0 +1,104 @@
+site_name: Taller de Programación Competitiva II IIC255X-202Y-Z
+repo_url: https://github.com/ProgramacionCompetitivaPUC/IIC255X-202Y-Z
+site_url: https://ProgramacionCompetitivaPUC.github.io/IIC255X-202Y-Z/
+edit_uri: ""
+nav:
+  - Home: index.md
+  - Información del Curso:
+      - Introducción: about/introduction.md
+      - Cómo funciona el curso: about/how_course_works.md
+      - Temario: about/syllabus.md
+      - Cálculo de la Nota Final: about/grading.md
+  - Apuntes:
+      - Strings:
+          - Rolling Hashing: notes/strings/rolling_hashing.md
+          - Trie String: notes/strings/trie_string.md
+          - KMP: notes/strings/kmp.md
+      - Geometría:
+          - Implementación base: notes/geometry/base_implementation.md
+          - Producto punto y producto cruz: notes/geometry/dot_and_cross_product.md
+      - Matemáticas:
+          - Aritmética modular: notes/math/modular_arithmetic.md
+  - Contests:
+      - contests/index.md
+      - Contest 1: contests/hints/contest1.md
+  - Recursos:
+      - resources/index.md
+      - C++:
+          - resources/cpp/index.md
+          - Compiladores de C++ para OSX: resources/cpp/cpp_osx.md
+      - Backtracking: resources/backtracking.md
+      - (Bi|Ter)nary Search: resources/search.md
+      - Data Structures: resources/data_structures.md
+      - Dynamic Programming: resources/dp.md
+      - Greedy: resources/greedy.md
+      - Divide and Conquer: resources/divconq.md
+      - Graphs: resources/graphs.md
+      - Strings: resources/strings.md
+      - Mathematics: resources/math.md
+      - Geometry: resources/geometry.md
+      - Square Root Decomposition: resources/sqrtdecomp.md
+  - Necesitas ayuda? Lee esto: help.md
+  - Tips para novat@s: tips.md
+  - Ética e Integridad Académica: ethics.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - markdown.extensions.meta
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+theme:
+  name: material
+  language: es
+  custom_dir: "theme"
+  # icon:
+  #   admonition:
+  #     info: fontawesome/brands/python
+  features:
+    - navigation.indexes
+    - content.code.annotate
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/img.css

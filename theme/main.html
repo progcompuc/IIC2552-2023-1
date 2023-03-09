@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+    {% if page and page.meta and page.meta.og_title %}
+        <meta property="og:title" content="{{ page.meta.og_title }}" />
+        <meta name="twitter:title" content="{{ page.meta.og_title }}">
+    {% elif page and page.meta and page.meta.title %}
+        <meta property="og:title" content="{{ page.meta.title }}" />
+        <meta name="twitter:title" content="{{ page.meta.title }}">
+    {% endif %}
+
+    {% if page and page.meta and page.meta.og_type %}
+        <meta property="og:type" content="{{ page.meta.og_type }}" />
+    {% else %}
+        <meta property="og:type" content="website" />
+    {% endif %}
+
+    {% if page and page.meta and page.meta.description %}
+        <meta property="og:description" content="{{ page.meta.description }}">
+        <meta name="twitter:description" content="{{ page.meta.description }}">
+    {% elif config.site_description %}
+        <meta property="og:description" content="{{ config.site_description }}">
+        <meta name="twitter:description" content="{{ config.site_description }}">
+    {% endif %}
+
+    <meta property="og:url" content="{{ page.canonical_url }}" />
+
+    <meta property="og:image" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:site" content="@twitter_handle">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png"">
+
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+{% endblock %}
