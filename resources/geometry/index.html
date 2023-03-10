@@ -1,0 +1,1138 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ProgramacionCompetitivaPUC.github.io/IIC2552-2023-1/resources/geometry/">
+      
+      
+        <link rel="prev" href="../math/">
+      
+      
+        <link rel="next" href="../sqrtdecomp/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+    
+    
+      
+        <title>Geometría - Taller de Programación Competitiva II IIC2552-2023-1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/img.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    
+        <meta property="og:title" content="Geometría" />
+        <meta name="twitter:title" content="Geometría">
+    
+
+    
+        <meta property="og:type" content="website" />
+    
+
+    
+
+    <meta property="og:url" content="https://ProgramacionCompetitivaPUC.github.io/IIC2552-2023-1/resources/geometry/" />
+
+    <meta property="og:image" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:site" content="@twitter_handle">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png"">
+
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#geometria" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Taller de Programación Competitiva II IIC2552-2023-1" class="md-header__button md-logo" aria-label="Taller de Programación Competitiva II IIC2552-2023-1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Taller de Programación Competitiva II IIC2552-2023-1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Geometría
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2552-2023-1" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Taller de Programación Competitiva II IIC2552-2023-1" class="md-nav__button md-logo" aria-label="Taller de Programación Competitiva II IIC2552-2023-1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Taller de Programación Competitiva II IIC2552-2023-1
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2552-2023-1" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Información del Curso
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Información del Curso
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/introduction/" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/activities/" class="md-nav__link">
+        Cómo funciona el curso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/syllabus/" class="md-nav__link">
+        Temario
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/grading/" class="md-nav__link">
+        Cálculo de la Nota Final
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../contests/">Contests</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Contests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Recursos</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recursos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../cpp/">C++</a>
+          
+            <label for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp/cpp_osx/" class="md-nav__link">
+        Compiladores de C++ para OSX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backtracking/" class="md-nav__link">
+        Backtracking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search/" class="md-nav__link">
+        (Bi|Ter)nary Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_structures/" class="md-nav__link">
+        Data Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dp/" class="md-nav__link">
+        Dynamic Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../greedy/" class="md-nav__link">
+        Greedy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divconq/" class="md-nav__link">
+        Divide and Conquer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/" class="md-nav__link">
+        Graphs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strings/" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        Mathematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Geometry
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Geometry
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apuntes-genericos-de-geometria" class="md-nav__link">
+    Apuntes genéricos de geometría
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producto-punto" class="md-nav__link">
+    Producto Punto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producto-cruz" class="md-nav__link">
+    Producto Cruz
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apuntes-varios-de-geometria-2d" class="md-nav__link">
+    Apuntes varios de Geometría 2D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apuntes-varios-de-geometria-3d" class="md-nav__link">
+    Apuntes varios de Geometría 3D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigonometria" class="md-nav__link">
+    Trigonometría
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-varios-de-poligonos" class="md-nav__link">
+    Algoritmos varios de Polígonos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convex-hull" class="md-nav__link">
+    Convex Hull
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculo-de-areas" class="md-nav__link">
+    Cálculo de Áreas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sweep-line-y-radial-sweep-line" class="md-nav__link">
+    Sweep Line y Radial Sweep Line
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dualidad-linea-punto" class="md-nav__link">
+    Dualidad Línea - Punto
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqrtdecomp/" class="md-nav__link">
+        Square Root Decomposition
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/" class="md-nav__link">
+        Necesitas ayuda? Lee esto
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/" class="md-nav__link">
+        Tips para novat@s
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethics/" class="md-nav__link">
+        Ética e Integridad Académica
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apuntes-genericos-de-geometria" class="md-nav__link">
+    Apuntes genéricos de geometría
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producto-punto" class="md-nav__link">
+    Producto Punto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#producto-cruz" class="md-nav__link">
+    Producto Cruz
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apuntes-varios-de-geometria-2d" class="md-nav__link">
+    Apuntes varios de Geometría 2D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apuntes-varios-de-geometria-3d" class="md-nav__link">
+    Apuntes varios de Geometría 3D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigonometria" class="md-nav__link">
+    Trigonometría
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-varios-de-poligonos" class="md-nav__link">
+    Algoritmos varios de Polígonos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convex-hull" class="md-nav__link">
+    Convex Hull
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculo-de-areas" class="md-nav__link">
+    Cálculo de Áreas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sweep-line-y-radial-sweep-line" class="md-nav__link">
+    Sweep Line y Radial Sweep Line
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dualidad-linea-punto" class="md-nav__link">
+    Dualidad Línea - Punto
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="geometria">Geometría</h1>
+<h2 id="apuntes-genericos-de-geometria">Apuntes genéricos de geometría</h2>
+<ul>
+<li><a href="https://vlecomte.github.io/cp-geo.pdf">https://vlecomte.github.io/cp-geo.pdf</a> (buenísimo y muy completo)</li>
+</ul>
+<h2 id="producto-punto">Producto Punto</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=LyGKycYT2v0">Youtube: Dot products and duality | Chapter 9, Essence of linear algebra</a></li>
+<li><a href="https://codeforces.com/blog/entry/48122">CodeForces: Geometry: 2D points and lines [Tutorial]</a> (saltarse a la parte dot product)</li>
+<li><a href="https://www.youtube.com/watch?v=p8BZTFNSKIw">Youtube: Dot Product &amp; Angle Between Vectors</a></li>
+<li><a href="https://www.youtube.com/watch?v=h0NJK4mEIJU">Youtube: Cross Product and Dot Product: Visual explanation</a></li>
+</ul>
+<h2 id="producto-cruz">Producto Cruz</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=eu6i7WJeinw">Youtube: Cross products - Essence of linear algebra, Chapter 10</a>](https://www.youtube.com/watch?v=eu6i7WJeinw)</li>
+<li><a href="https://www.mathsisfun.com/algebra/vectors-cross-product.html">Math is fun: Vector Cross Product</a></li>
+<li><a href="https://stackoverflow.com/questions/243945/calculating-a-2d-vectors-cross-product">StackOverlfow: Calculating a 2D Vector's Cross Product</a></li>
+<li><a href="https://codeforces.com/blog/entry/48122">CodeForces: Geometry: 2D points and lines [Tutorial]</a></li>
+<li><a href="https://www.youtube.com/watch?v=h0NJK4mEIJU">Youtube: Cross Product and Dot Product: Visual explanation</a></li>
+</ul>
+<h2 id="apuntes-varios-de-geometria-2d">Apuntes varios de Geometría 2D</h2>
+<ul>
+<li><a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Material/Geometry/2D.cpp">apuntes de Benja</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/2D.cpp">apuntes de Pablo</a></li>
+<li>Video Repaso de Geometría (muy bueno): <a href="https://youtu.be/nk5ejrBWORw?list=PL-c_98SOXhxaXMMfnemh2ihniZsj57L8-">youtube: Geometría Computacional [ICPCCL 2016]</a></li>
+<li><a href="https://cp-algorithms.com/geometry/basic-geometry.html">CP-Algorithms: Geometry</a></li>
+</ul>
+<h2 id="apuntes-varios-de-geometria-3d">Apuntes varios de Geometría 3D</h2>
+<ul>
+<li><a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Material/Geometry/3D.cpp">apuntes de Benja</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/3D.cpp">apuntes de Pablo</a></li>
+</ul>
+<h2 id="trigonometria">Trigonometría</h2>
+<ul>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/Trigonometry.cpp">implementaciones varias de trigonometría</a></li>
+</ul>
+<h2 id="algoritmos-varios-de-poligonos">Algoritmos varios de Polígonos</h2>
+<ul>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/PolygonAlgorithms.cpp">implementaciones varias de algoritmos sobre polígonos</a></li>
+<li>Detectar si un punto está dentro de un polígono:</li>
+<li><a href="http://geomalgorithms.com/a03-_inclusion.html">geomalgorithms: Inclusion of a Point in a Polygon</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Point_in_polygon">wikipedia: Point in polygon</a></li>
+<li>Puntos extremos en un polígono convexo:</li>
+<li><a href="http://geomalgorithms.com/a14-_extreme_pts.html">geomalgorithms: Extreme Points of Convex Polygons</a></li>
+<li>Pick's Theorem:</li>
+<li><a href="https://cp-algorithms.com/geometry/picks-theorem.html">https://cp-algorithms.com/geometry/picks-theorem.html</a></li>
+<li><a href="https://cp-algorithms.com/geometry/lattice-points.html">https://cp-algorithms.com/geometry/lattice-points.html</a></li>
+</ul>
+<h2 id="convex-hull">Convex Hull</h2>
+<ul>
+<li>Buen video explicando Convex Hull: <a href="https://www.youtube.com/watch?v=wRTGDig3jx8">youtube: 5 6 Convex Hull 1350</a></li>
+<li>Monotone Chain Algorithm (algoritmo recomendado):</li>
+<li><a href="https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain">https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/ConvexHull.cpp">Código de ejemplo</a></li>
+<li>Convex Hull Trick:</li>
+<li><a href="https://wcipeg.com/wiki/Convex_hull_trick">https://wcipeg.com/wiki/Convex_hull_trick</a></li>
+<li><a href="https://stackoverflow.com/questions/17834699/what-is-convex-hull-trick-exactly">https://stackoverflow.com/questions/17834699/what-is-convex-hull-trick-exactly</a></li>
+</ul>
+<h2 id="calculo-de-areas">Cálculo de Áreas</h2>
+<ul>
+<li>Teorema de Green (aplicado al caso particular de calcular áreas):</li>
+<li>lecturas:<ul>
+<li><a href="https://math.stackexchange.com/questions/199003/proving-greens-theorem-for-computing-area">https://math.stackexchange.com/questions/199003/proving-greens-theorem-for-computing-area</a></li>
+<li><a href="https://mathinsight.org/greens_theorem_find_area">https://mathinsight.org/greens_theorem_find_area</a></li>
+</ul>
+</li>
+<li>videos:<ul>
+<li><a href="https://www.youtube.com/watch?v=a_zdFvYXX_c">youtube: Green's Theorem</a></li>
+<li><a href="https://www.youtube.com/watch?v=42vEvHpXYP8">youtube: 78 - Finding area with Green's theorem</a></li>
+<li><a href="https://www.youtube.com/watch?v=w3ugdu0oFgE">How to Use Green's Theorem to Find the Area of A Region</a></li>
+<li><a href="https://www.youtube.com/watch?v=KXof0q88xbg">Green's Theorem: area under an arch - MIT 18.02SC Multivariable Calculus, Fall 2010</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/GreensTheorem.cpp">Códigos de ejemplo</a></li>
+<li>Aplicación a polígonos - área de un polígono simple:</li>
+<li><a href="http://math.blogoverflow.com/2014/06/04/greens-theorem-and-area-of-polygons/">http://math.blogoverflow.com/2014/06/04/greens-theorem-and-area-of-polygons/</a></li>
+<li><a href="http://stackoverflow.com/questions/451426/how-do-i-calculate-the-area-of-a-2d-polygon">http://stackoverflow.com/questions/451426/how-do-i-calculate-the-area-of-a-2d-polygon</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/2D.cpp">código de ejemplo</a> (ctrl+f "area")</li>
+</ul>
+<h2 id="sweep-line-y-radial-sweep-line">Sweep Line y Radial Sweep Line</h2>
+<ul>
+<li><a href="http://codeforces.com/blog/entry/20377">codeforces: How to sweep like a Sir</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sweep_line_algorithm">wikipedia: Sweep line algorithm</a></li>
+<li><a href="https://www.topcoder.com/community/data-science/data-science-tutorials/line-sweep-algorithms/">topcoder: line sweep algorithms</a>  </li>
+</ul>
+<h2 id="dualidad-linea-punto">Dualidad Línea - Punto</h2>
+<ul>
+<li>Buenas slides explicando dualidad: <a href="https://algo.kaust.edu.sa/Documents/cs372l13.pdf">https://algo.kaust.edu.sa/Documents/cs372l13.pdf</a></li>
+<li>Excelente pdf con demostraciones: <a href="https://pdfs.semanticscholar.org/810c/e0c19283481567c6545bf8c0cc8a4dcb8a1f.pdf">https://pdfs.semanticscholar.org/810c/e0c19283481567c6545bf8c0cc8a4dcb8a1f.pdf</a></li>
+<li>Aplicación interactiva: <a href="http://students.cec.wustl.edu/~tdeck/duality/">http://students.cec.wustl.edu/~tdeck/duality/</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

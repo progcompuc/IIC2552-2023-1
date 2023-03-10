@@ -1,0 +1,1062 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ProgramacionCompetitivaPUC.github.io/IIC2552-2023-1/resources/cpp/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="cpp_osx/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+    
+    
+      
+        <title>C++ - Taller de Programación Competitiva II IIC2552-2023-1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/img.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    
+        <meta property="og:title" content="C++" />
+        <meta name="twitter:title" content="C++">
+    
+
+    
+        <meta property="og:type" content="website" />
+    
+
+    
+
+    <meta property="og:url" content="https://ProgramacionCompetitivaPUC.github.io/IIC2552-2023-1/resources/cpp/" />
+
+    <meta property="og:image" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:site" content="@twitter_handle">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png"">
+
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Taller de Programación Competitiva II IIC2552-2023-1" class="md-header__button md-logo" aria-label="Taller de Programación Competitiva II IIC2552-2023-1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Taller de Programación Competitiva II IIC2552-2023-1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C++
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2552-2023-1" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Taller de Programación Competitiva II IIC2552-2023-1" class="md-nav__button md-logo" aria-label="Taller de Programación Competitiva II IIC2552-2023-1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Taller de Programación Competitiva II IIC2552-2023-1
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2552-2023-1" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Información del Curso
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Información del Curso
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/introduction/" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/activities/" class="md-nav__link">
+        Cómo funciona el curso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/syllabus/" class="md-nav__link">
+        Temario
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/grading/" class="md-nav__link">
+        Cálculo de la Nota Final
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../contests/">Contests</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Contests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Recursos</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recursos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">C++</a>
+          
+            <label for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cpp_osx/" class="md-nav__link">
+        Compiladores de C++ para OSX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backtracking/" class="md-nav__link">
+        Backtracking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search/" class="md-nav__link">
+        (Bi|Ter)nary Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_structures/" class="md-nav__link">
+        Data Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dp/" class="md-nav__link">
+        Dynamic Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../greedy/" class="md-nav__link">
+        Greedy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divconq/" class="md-nav__link">
+        Divide and Conquer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/" class="md-nav__link">
+        Graphs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strings/" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        Mathematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometry/" class="md-nav__link">
+        Geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqrtdecomp/" class="md-nav__link">
+        Square Root Decomposition
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/" class="md-nav__link">
+        Necesitas ayuda? Lee esto
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/" class="md-nav__link">
+        Tips para novat@s
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethics/" class="md-nav__link">
+        Ética e Integridad Académica
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalando-c" class="md-nav__link">
+    Instalando C++
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilando-y-ejecutando-codigo-en-c" class="md-nav__link">
+    Compilando y ejecutando código en C++:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutoriales-para-aprender-c" class="md-nav__link">
+    Tutoriales para aprender C++
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-de-implementacion-en-c-muy-utiles-en-progcomp" class="md-nav__link">
+    Tips de implementación en C++ (muy útiles en progcomp)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-cheat-sheets-tricks" class="md-nav__link">
+    C++ Cheat Sheets &amp; Tricks:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="c">C++</h1>
+<div class="highlight"><span class="filename">Ejemplo de Hello World</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="c1"> //importa todo</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"> </span><span class="c1">//para no escribir std::</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//Usando syntax de C</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">//Usando streams de C++</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Ejemplo de Template</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#pragma GCC optimize(&quot;Ofast&quot;)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// defines</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="cp">#define rep(i,a,b) for(int i = a; i &lt; b; ++i)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="cp">#define invrep(i,b,a) for(int i = b; i &gt;= a; --i)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="cp">#define umap unordered_map</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="cp">#define uset unordered_set</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="cp">#define ff first</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="cp">#define ss second</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1">// typedefs</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">typedef</span><span class="w"> </span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ii</span><span class="p">;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ull</span><span class="p">;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ll</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1">// -------------------------------</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="instalando-c">Instalando C++</h2>
+<ul>
+<li>Windows:<ul>
+<li><a href="https://code.visualstudio.com/docs/cpp/config-mingw">Usando GCC con MinGW</a></li>
+<li><a href="https://www.msys2.org/">MSYS2</a></li>
+</ul>
+</li>
+<li>Linux:<ul>
+<li>Debian o Ubuntu (apt)
+    <div class="highlight"><span class="filename">Usar el comando</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>g++
+</code></pre></div></li>
+<li>Arch Linux (pacman)
+    <div class="highlight"><span class="filename">Usar el comando</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>g++
+</code></pre></div></li>
+<li>CentOS, Fedora, o RHEL (yum)
+    <div class="highlight"><span class="filename">Usar el comando</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>gcc-c++
+</code></pre></div>
+<a href="http://askubuntu.com/questions/61408/what-is-a-command-to-compile-and-run-c-programs">Compilar con g++</a></li>
+</ul>
+</li>
+<li>Mac:<ul>
+<li><a href="cpp_osx">Installer en OSX</a></li>
+<li><a href="http://stackoverflow.com/questions/9148488/how-do-i-compile-c-with-clang">Compilar con CLang</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="compilando-y-ejecutando-codigo-en-c">Compilando y ejecutando código en C++:</h2>
+<p>Ejemplo de secuencia de pasos para resolver un problema en C++ en Windows usando la terminal (en Linux/Mac es bien parecido):</p>
+<ul>
+<li>Crear un archivo <code>example.cpp</code></li>
+<li>Escribir un código de C++ válido y guardar.</li>
+<li>Abrir una terminal y navegar a la carpeta donde está el archivo.</li>
+<li>Opción 1:<ul>
+<li>En la terminal, compilar y ejecutar con el comando: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span>g++<span class="w"> </span>-std<span class="o">=</span>c++11<span class="w"> </span>example.cpp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>a.exe
+</code></pre></div></li>
+<li>Escribir el input directamente en la terminal</li>
+<li>El output irá apareciendo poco a poco en la terminal (intercalado con el input)</li>
+</ul>
+</li>
+<li>Opción 2:<ul>
+<li>Crear un archivo en la carpeta donde están parados llamado input.txt, copiar y pegar el input ahí y guardar.</li>
+<li>En la terminal, compilar y ejecutar con el comando: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span>g++<span class="w"> </span>-std<span class="o">=</span>c++11<span class="w"> </span>example.cpp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>a.exe<span class="w"> </span>&lt;<span class="w"> </span>input.txt
+</code></pre></div></li>
+<li>el output aparecerá en la misma terminal</li>
+</ul>
+</li>
+<li>Opción 3:<ul>
+<li>Crear un archivo en la carpeta donde están parados llamado input.txt, copiar y pegar el input ahí y guardar.</li>
+<li>En la terminal, compilar y ejecutar con el comando: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span>g++<span class="w"> </span>-std<span class="o">=</span>c++11<span class="w"> </span>example.cpp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>a.exe<span class="w"> </span>&lt;<span class="w"> </span>input.txt<span class="w"> </span>&gt;<span class="w"> </span>output.txt
+</code></pre></div></li>
+<li>el output quedará guardado en el archivo <code>output.txt</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="tutoriales-para-aprender-c">Tutoriales para aprender C++</h2>
+<ul>
+<li>(youtube) <a href="https://youtu.be/zTUJFG34Tyw">Intro a la Programación Competitiva en C++</a> <strong>(&lt;&lt;&lt;&lt; video cortito, recomendado)</strong></li>
+<li><a href="https://runestone.academy/runestone/books/published/cpp4python/index.html">C++ for Python Programmers</a> <strong>(&lt;&lt;&lt;&lt; por si vienes de Python)</strong></li>
+<li><a href="https://www.sololearn.com/Course/CPlusPlus/">C++ Tutorial (SOLO LEARN: EVERYONE CAN CODE)</a></li>
+<li><a href="http://www.cplusplus.com/doc/tutorial/">http://www.cplusplus.com/doc/tutorial/</a></li>
+<li><a href="https://www.hackerrank.com/domains/cpp">https://www.hackerrank.com/domains/cpp</a></li>
+<li><a href="http://www.learncpp.com/">LearnCpp</a></li>
+<li><a href="http://www.cplusplus.com/reference/">Documentación Oficial de C++</a></li>
+<li>(youtube) <a href="https://youtu.be/pqWsOsfGKA0">Intro a C++</a></li>
+<li>(youtube) <a href="https://youtu.be/OldL5e5eGmY">Estructuras básicas en C++</a></li>
+<li>(youtube) <a href="https://www.youtube.com/playlist?list=PLfVsf4Bjg79Cu5MYkyJ-u4SyQmMhFeC1C">C++ Programming Video Tutorials For Beginners [ Complete Series ]</a></li>
+<li>INPUT / OUTPUT:<ul>
+<li><a href="http://codeforces.com/blog/entry/5217">Yet again on C++ input/output</a></li>
+<li><a href="http://www.cplusplus.com/forum/beginner/34165/">¿Qué es mejor para leer input / imprimir output? cin/cout vs printf/scanf</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="tips-de-implementacion-en-c-muy-utiles-en-progcomp">Tips de implementación en C++ (muy útiles en progcomp)</h2>
+<ul>
+<li>Cosas útiles que deberían saber de <strong>C++11 (PARA ESCRIBIR CÓDIGOS MÁS CORTOS Y ELEGANTES)</strong>:<ul>
+<li><a href="https://codeforces.com/blog/entry/10124">Tutorial: C++11 for programming contests</a></li>
+<li><a href="https://youtu.be/U6mgsPqV32A">Learn C++ 11 in 20 Minutes - Part I</a></li>
+<li><a href="https://youtu.be/Lt0ASrloGSE">Learn C++ 11 in 20 Minutes - Part II</a></li>
+</ul>
+</li>
+<li>
+<p>Los beneficios de usar <strong>references</strong> (&amp;) y <strong>pointers</strong> (*) (<strong>para no copiar todo por valor y así ser más eficientes</strong>):</p>
+<ul>
+<li><a href="http://www.ntu.edu.sg/home/ehchua/programming/cpp/cp4_pointerreference.html">Diferencia entre references y pointers explicada</a> <strong>(&lt;&lt;&lt;&lt; muy buen artículo, 100% recomendado)</strong></li>
+<li><a href="https://www.geeksforgeeks.org/passing-vector-function-cpp/">geeksforgeeks - Passing vector to a function in C++</a></li>
+<li><a href="https://www.geeksforgeeks.org/when-do-we-pass-arguments-by-reference-or-pointer/">geeksforgeeks - When do we pass arguments by reference or pointer?</a>   </li>
+</ul>
+</li>
+<li>
+<p><a href="https://codeforces.com/blog/entry/6230">Codeforces - Manejo de Strings en C++</a> (<strong>buenos tips para cuando tienen que leer input</strong>)</p>
+</li>
+<li><a href="https://www.youtube.com/playlist?list=PLfVsf4Bjg79Cu5MYkyJ-u4SyQmMhFeC1C">Youtube playlist: lista exhaustiva de videos cubriendo muchísimos aspectos de C++</a></li>
+<li>STL: standard template library (buen material sobre la standard library de C++, <strong>MUY RECOMENDADO</strong>)<ul>
+<li><a href="https://youtu.be/ltBdTiRgSaw">Introduction of STL #1: Overview</a></li>
+<li><a href="https://youtu.be/gxZJ5JNuWMY">Introduction of STL #2: Sequence Containers</a></li>
+<li><a href="https://youtu.be/6iyzPed7FrM">Introduction of STL #3: Associative Containers</a></li>
+<li><a href="https://youtu.be/NNLvY9O7ufU">Introduction of STL #4: Unordered Containers</a></li>
+<li><a href="https://youtu.be/vO2AlrBf5rQ">Introduction of STL #5: Iterators and Algorithms</a></li>
+<li><a href="https://youtu.be/shqvSkk8r0M">Introduction of STL #6: Functors</a></li>
+<li><a href="https://www.topcoder.com/community/competitive-programming/tutorials/power-up-c-with-the-standard-template-library-part-1/">Topcoder: power up c++ with the standard template library part 1</a></li>
+<li><a href="https://www.topcoder.com/community/competitive-programming/tutorials/power-up-c-with-the-standard-template-library-part-2/">Topcoder: power up c++ with the standard template library part 2</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLVFrD1dmDdve4h3Shk0uePpXp8JUMM1w5">Youtube playlist: varios algoritmos de la librería estándar de C++ para llegar y usar</a></li>
+</ul>
+</li>
+<li>Para <strong>aprender a trabajar con bits</strong> (operaciones bitwise):<ul>
+<li><a href="https://www.cprogramming.com/tutorial/bitwise_operators.html">Tutorial sobre Bitwise Operators</a></li>
+<li><a href="https://stackoverflow.com/questions/10493411/what-is-bit-masking">¿Qué es bit masking?</a></li>
+<li><a href="https://www.geeksforgeeks.org/bitwise-hacks-for-competitive-programming/">geeksforgeeks - Bitwise hacks for competitive programming</a></li>
+<li><a href="https://www.geeksforgeeks.org/bit-tricks-competitive-programming/">geeksforgeeks - Bit Tricks for competitive programming</a></li>
+</ul>
+</li>
+<li>¿Qué son y para qué sirven <strong>Structs</strong> y <strong>Classes</strong> en C++?<ul>
+<li><a href="https://youtu.be/qJ4Kzk6mnFc">Advanced C++: Struct Vs. Class</a></li>
+<li><a href="https://youtu.be/6gg9Xlv35-I">Introduction to Structures in C++ CPP Programming Video Tutorial</a></li>
+<li><a href="https://youtu.be/ABRP_5RYhqU">Buckys C++ Programming Tutorials - 12 - Introduction to Classes and Objects</a></li>
+<li><a href="https://youtu.be/W1f3TelobMg">Structure and Class differences in C++ C ++ Tutorial Mr. Kishore</a></li>
+<li><a href="https://youtu.be/fLgTtaqqJp0">CLASSES vs STRUCTS in C++</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="c-cheat-sheets-tricks">C++ Cheat Sheets &amp; Tricks:</h2>
+<ul>
+<li><a href="https://github.com/ntuorangejuice/cheat-sheet">C++ Cheat Sheet for ACM ICPC </a><ul>
+<li>Aquí pueden encontrar un C++ Solution Template (código que uno siempre escribe al comenzar una solución) + MUCHO MUCHO más :)</li>
+</ul>
+</li>
+<li><a href="https://gist.github.com/satwikkansal/c959e89161cc60db16b412233177feab">C++ STL cheatsheet for competitive programming</a></li>
+<li><a href="https://codeforces.com/blog/entry/15643">C++ Tricks</a></li>
+<li><a href="https://www.geeksforgeeks.org/c-tricks-competitive-programming-c-11/">C++ tricks for competitive programming (for C++ 11)</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/c%2B%2B_cheat_sheet.cpp">C++ Cheat Sheet de Pablo Messina</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

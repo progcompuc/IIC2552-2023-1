@@ -1,0 +1,1292 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ProgramacionCompetitivaPUC.github.io/IIC2552-2023-1/resources/graphs/">
+      
+      
+        <link rel="prev" href="../divconq/">
+      
+      
+        <link rel="next" href="../strings/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+    
+    
+      
+        <title>Grafos - Taller de Programación Competitiva II IIC2552-2023-1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/img.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    
+        <meta property="og:title" content="Grafos" />
+        <meta name="twitter:title" content="Grafos">
+    
+
+    
+        <meta property="og:type" content="website" />
+    
+
+    
+
+    <meta property="og:url" content="https://ProgramacionCompetitivaPUC.github.io/IIC2552-2023-1/resources/graphs/" />
+
+    <meta property="og:image" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:site" content="@twitter_handle">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png"">
+
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#grafos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Taller de Programación Competitiva II IIC2552-2023-1" class="md-header__button md-logo" aria-label="Taller de Programación Competitiva II IIC2552-2023-1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Taller de Programación Competitiva II IIC2552-2023-1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Grafos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2552-2023-1" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Taller de Programación Competitiva II IIC2552-2023-1" class="md-nav__button md-logo" aria-label="Taller de Programación Competitiva II IIC2552-2023-1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Taller de Programación Competitiva II IIC2552-2023-1
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2552-2023-1" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Información del Curso
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Información del Curso
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/introduction/" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/activities/" class="md-nav__link">
+        Cómo funciona el curso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/syllabus/" class="md-nav__link">
+        Temario
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/grading/" class="md-nav__link">
+        Cálculo de la Nota Final
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../contests/">Contests</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Contests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Recursos</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recursos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../cpp/">C++</a>
+          
+            <label for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp/cpp_osx/" class="md-nav__link">
+        Compiladores de C++ para OSX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backtracking/" class="md-nav__link">
+        Backtracking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search/" class="md-nav__link">
+        (Bi|Ter)nary Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_structures/" class="md-nav__link">
+        Data Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dp/" class="md-nav__link">
+        Dynamic Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../greedy/" class="md-nav__link">
+        Greedy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divconq/" class="md-nav__link">
+        Divide and Conquer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Graphs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Graphs
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-grafos" class="md-nav__link">
+    Introducción a Grafos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-de-graph-traversal" class="md-nav__link">
+    Algoritmos de Graph Traversal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diametro-de-un-arbol" class="md-nav__link">
+    Diámetro de un Árbol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topological-sort" class="md-nav__link">
+    Topological Sort
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-de-camino-mas-corto-shortest-path" class="md-nav__link">
+    Algoritmos de Camino Más Corto (Shortest Path)
+  </a>
+  
+    <nav class="md-nav" aria-label="Algoritmos de Camino Más Corto (Shortest Path)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dijkstra-cuando-no-hay-aristas-negativas" class="md-nav__link">
+    Dijkstra (cuando NO hay aristas negativas)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bellman-ford-cuando-si-hay-aristas-negativas" class="md-nav__link">
+    Bellman-Ford (cuando SÍ hay aristas negativas)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floyd-warshall" class="md-nav__link">
+    Floyd-Warshall
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-spanning-tree-mst" class="md-nav__link">
+    Minimum Spanning Tree (MST)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lowest-common-ancestor-lca" class="md-nav__link">
+    Lowest Common Ancestor (LCA)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puntos-de-articulacion-aristas-de-corte-y-componentes-biconexas" class="md-nav__link">
+    Puntos de articulación, Aristas de corte y Componentes Biconexas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strongly-connected-components-scc" class="md-nav__link">
+    Strongly Connected Components (SCC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-maximo-y-aplicaciones" class="md-nav__link">
+    Flujo Máximo y aplicaciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heavy-light-decomposition" class="md-nav__link">
+    Heavy-Light Decomposition
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strings/" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        Mathematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometry/" class="md-nav__link">
+        Geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqrtdecomp/" class="md-nav__link">
+        Square Root Decomposition
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/" class="md-nav__link">
+        Necesitas ayuda? Lee esto
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/" class="md-nav__link">
+        Tips para novat@s
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethics/" class="md-nav__link">
+        Ética e Integridad Académica
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-grafos" class="md-nav__link">
+    Introducción a Grafos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-de-graph-traversal" class="md-nav__link">
+    Algoritmos de Graph Traversal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diametro-de-un-arbol" class="md-nav__link">
+    Diámetro de un Árbol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topological-sort" class="md-nav__link">
+    Topological Sort
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmos-de-camino-mas-corto-shortest-path" class="md-nav__link">
+    Algoritmos de Camino Más Corto (Shortest Path)
+  </a>
+  
+    <nav class="md-nav" aria-label="Algoritmos de Camino Más Corto (Shortest Path)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dijkstra-cuando-no-hay-aristas-negativas" class="md-nav__link">
+    Dijkstra (cuando NO hay aristas negativas)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bellman-ford-cuando-si-hay-aristas-negativas" class="md-nav__link">
+    Bellman-Ford (cuando SÍ hay aristas negativas)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floyd-warshall" class="md-nav__link">
+    Floyd-Warshall
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-spanning-tree-mst" class="md-nav__link">
+    Minimum Spanning Tree (MST)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lowest-common-ancestor-lca" class="md-nav__link">
+    Lowest Common Ancestor (LCA)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puntos-de-articulacion-aristas-de-corte-y-componentes-biconexas" class="md-nav__link">
+    Puntos de articulación, Aristas de corte y Componentes Biconexas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strongly-connected-components-scc" class="md-nav__link">
+    Strongly Connected Components (SCC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-maximo-y-aplicaciones" class="md-nav__link">
+    Flujo Máximo y aplicaciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heavy-light-decomposition" class="md-nav__link">
+    Heavy-Light Decomposition
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="grafos">Grafos</h1>
+<h2 id="introduccion-a-grafos">Introducción a Grafos</h2>
+<ul>
+<li>Slides de Nico Lehmann sobre Grafos (muy buenas):</li>
+<li><a href="http://campamento2015.progcomp.cl/material">http://campamento2015.progcomp.cl/material</a> (revisar la parte Grafos)</li>
+<li><a href="http://campamento2016.progcomp.cl/material">http://campamento2016.progcomp.cl/material</a> (revisar la parte Grafos)</li>
+<li>(youtube) <a href="https://youtu.be/gXgEDyodOJU">Data structures: Introduction to graphs</a></li>
+<li>(youtube) <a href="https://youtu.be/AfYqN3fGapc">Data structures: Properties of Graphs</a></li>
+<li>(youtube) <a href="https://youtu.be/ZdY1Fp9dKzs">Graph Representation part 01 - Edge List</a></li>
+<li>(youtube) <a href="https://youtu.be/9C2cpQZVRBA">Graph Representation part 02 - Adjacency Matrix</a></li>
+<li>(youtube) <a href="https://youtu.be/k1wraWzqtvQ">Graph Representation part 03 - Adjacency List</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=S1Zwhz-MhCs">Graph Theory: 02. Definition of a Graph</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=lLOvB1qFE1E">Graph Theory: 03. Examples of Graphs</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=71XbdtoG7P8">Graph Theory: 04. Families of Graphs</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=QFQlxtz7f6g">Graph Theory: 36. Definition of a Tree</a></li>
+<li>Grafo dirigido vs Grafo no-dirigido:</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=amaH38_mXK4">Graph Types Directed and Undirected Graph</a></li>
+<li>(geeksforgeeks) <a href="https://www.geeksforgeeks.org/graph-and-its-representations/">Graph and its representations</a></li>
+</ul>
+<h2 id="algoritmos-de-graph-traversal">Algoritmos de Graph Traversal</h2>
+<ul>
+<li><strong>Breadth First Search (BFS)</strong>:</li>
+<li><a href="https://cp-algorithms.com/graph/breadth-first-search.html">cp-algorithms: BFS</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/BFS.cpp">código de ejemplo</a></li>
+<li><strong>Depth First Search (DFS)</strong>:</li>
+<li><a href="https://cp-algorithms.com/graph/depth-first-search.html">cp-algorithms: DFS</a></li>
+<li>
+<p><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/DFS.cpp">código de ejemplo</a></p>
+</li>
+<li>
+<p>(youtube) <a href="https://www.youtube.com/watch?v=pcKY4hjDrxk">5.1 Graph Traversals - BFS &amp; DFS -Breadth First Search and Depth First Search</a></p>
+</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=bIA8HEEUxZI">Graph Traversals - Breadth First and Depth First</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=ImMnYq2zP4Y">Graph : BFS, DFS</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=zaBhtODEL0w">Algorithms: Graph Search, DFS and BFS</a></li>
+<li>Flood Fill: <a href="https://en.wikipedia.org/wiki/Flood_fill">https://en.wikipedia.org/wiki/Flood_fill</a></li>
+</ul>
+<h2 id="diametro-de-un-arbol">Diámetro de un Árbol</h2>
+<ul>
+<li><a href="http://cs.stackexchange.com/questions/22855/algorithm-to-find-diameter-of-a-tree-using-bfs-dfs-why-does-it-work">cs.stackexchange: Algorithm to find diameter of a tree using BFS/DFS. Why does it work?</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/diameter_of_tree.cpp">código de ejemplo</a></li>
+</ul>
+<h2 id="topological-sort">Topological Sort</h2>
+<ul>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=eL-KzMXSXXI">Topological Sort Algorithm | Graph Theory</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=ddTC4Zovtbc">Topological Sort Graph Algorithm</a></li>
+<li><a href="https://codeforces.com/blog/entry/4907">Codeforces - How to check cycles inside a Topological Sort</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/TopoSort.cpp">Códigos de ejemplo</a></li>
+</ul>
+<h2 id="algoritmos-de-camino-mas-corto-shortest-path">Algoritmos de Camino Más Corto (Shortest Path)</h2>
+<ul>
+<li>De un nodo (<strong>single source</strong>) a todos los demás nodos:</li>
+<li>
+<h5 id="dijkstra-cuando-no-hay-aristas-negativas">Dijkstra (cuando <strong>NO</strong> hay aristas negativas)</h5>
+<ul>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=_lHSawdgXpI">Dijkstra's algorithm in 3 minutes — Review and example</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=gdmfOwyQlcI">Dijkstra's Algorithm (5 minutos)</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=5GT5hYzjNoo">Muy buen ejemplo de Dijkstra</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=ZjSvU2guTtY">Correctness of Dijkstra's Algorithm</a></li>
+<li><a href="https://cp-algorithms.com/graph/dijkstra.html">cp-algorithms: dijkstra (incluye código de ejemplo)</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/Dijkstra.cpp">Código de ejemplo</a></li>
+<li><a href="https://github.com/ignaciohermosillacornejo/apuntes_icpc/blob/master/graphs/dijsktra/dijsktra.cpp">Código de ejemplo Ignacio</a></li>
+</ul>
+</li>
+<li>
+<h5 id="bellman-ford-cuando-si-hay-aristas-negativas">Bellman-Ford (cuando <strong>SÍ</strong> hay aristas negativas)</h5>
+<ul>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=obWXjtg0L64">Bellman-Ford in 5 minutes — Step by step example</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=9PHkk0UavIM">Bellman-Ford in 4 minutes — Theory</a></li>
+<li>(youtube) <a href="https://youtu.be/lyw4FaxrwHg">Bellman Ford Algorithm | Shortest path &amp; Negative cycles | Graph Theory</a></li>
+<li>(video) <a href="https://es.coursera.org/lecture/algorithms-on-graphs/bellman-ford-algorithm-proof-of-correctness-txk8R">Bellman-Ford Algorithm: Proof of Correctness</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=FtN3BYH2Zes">Bellman Ford Algorithm - Single Source Shortest Path - Dynamic Programming (17m)</a></li>
+<li><a href="https://cp-algorithms.com/graph/bellman_ford.html">cp-algorithms: bellman-ford (incluye códigos de ejemplo)</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/BellmanFord.cpp">Código de ejemplo</a></li>
+<li>¿Cómo detectar un ciclo negativo con Bellman-Ford?</li>
+<li><a href="https://www.geeksforgeeks.org/detect-negative-cycle-graph-bellman-ford/">GeeksforGeeks - Detect a negative cycle in a Graph | (Bellman Ford)</a></li>
+<li>(PDF) <a href="https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture14.pdf">Proof of Correctness</a></li>
+</ul>
+</li>
+<li>De todos los nodos (<strong>multiple source</strong>) a todos los nodos:</li>
+<li>
+<h5 id="floyd-warshall">Floyd-Warshall</h5>
+<ul>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=4OQeCuLYj-4">Floyd–Warshall algorithm in 4 minutes</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=oNI0rf2P9gE">All Pairs Shortest Path (Floyd-Warshall) - Dynamic Programming (14m)</a></li>
+<li><a href="https://cp-algorithms.com/graph/all-pair-shortest-path-floyd-warshall.html">cp-algorithms: floyd-warshall (incluye código de ejemplo)</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/FloydWarshall.cpp">Código de ejemplo</a></li>
+<li>¿Qué pasa cuando hay ciclos negativos?</li>
+<li>(wikipedia) <a href="https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm#Behavior_with_negative_cycles">Behavior_with_negative_cycles</a></li>
+<li><a href="https://stackoverflow.com/questions/15709277/floyd-warshall-with-negative-cycles-how-do-i-find-all-undefined-paths">Floyd-Warshall with negative cycles. How do I find all undefined paths?</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="minimum-spanning-tree-mst">Minimum Spanning Tree (MST)</h2>
+<ul>
+<li>(youtube) <a href="https://youtu.be/4ZlRH0eK-qQ">3.5 Prims and Kruskals Algorithms - Greedy Method</a></li>
+<li>Kruskal's Algorithm:</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=71UQH7Pr9kU">Kruskal's algorithm in 2 minutes — Review and example</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=fAuF0EuZVCk">Kruskal's algorithm Minimum Spanning Tree Graph Algorithm</a></li>
+<li>Prim's Algorithm:</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=cplfcGZmX7I">Prim's algorithm in 2 minutes — Review and example</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=oP2-8ysT3QQ">Prim's Algorithm Minimum Spanning Tree Graph Algorithm</a></li>
+<li>Correcteness Proofs:</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=P7K7mG8QDVM">Proof of Cut Property</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=UfhUr5QzfiI">Proof of Prim's MST algorithm using cut property</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=S9PIItOUyzA">Correctness of Kruskal's Algorithm</a></li>
+<li>cp-algorithms:</li>
+<li><a href="https://cp-algorithms.com/graph/mst_prim.html">Minimum Spanning Tree - Prim's Algorithm</a></li>
+<li><a href="https://cp-algorithms.com/graph/mst_kruskal.html">Minimum Spanning Tree - Kruskal</a></li>
+<li><a href="https://cp-algorithms.com/graph/mst_kruskal_with_dsu.html">Minimum Spanning Tree - Kruskal with Disjoint Set Union</a></li>
+<li><a href="https://cp-algorithms.com/graph/second_best_mst.html">Second best Minimum Spanning Tree - Using Kruskal and Lowest Common Ancestor</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/MinimumSpanningTree.cpp">Códigos de ejemplo</a></li>
+</ul>
+<h2 id="lowest-common-ancestor-lca">Lowest Common Ancestor (LCA)</h2>
+<ul>
+<li>General Overview of Methods:</li>
+<li><a href="http://codeforces.com/blog/entry/16221">http://codeforces.com/blog/entry/16221</a> (skip to the LCA part)</li>
+<li>Método 1 (<strong>RECOMENDADO</strong>): Binary Lifting Method (aka <a href="https://en.wikipedia.org/wiki/Level_ancestor_problem#Jump_pointer_algorithm">jump pointers</a>):</li>
+<li><a href="http://codeforces.com/blog/entry/22325">Codeforces: Lowest common ancestor's binary lifting method for path queries on trees</a> Nota: como dice el post, este método es muy útil ya que se puede adaptar para computar consultas sobre caminos entre 2 nodos en un árbol.</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=kOfa6t8WnbI">Episode 17 - Binary Lifting</a></li>
+<li>Método 2: Euler Tour + Range Minimun Query:</li>
+<li><a href="https://www.topcoder.com/community/data-science/data-science-tutorials/range-minimum-query-and-lowest-common-ancestor/">Topcoder: range minimum query and lowest common ancestor</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=EKcQt-74bNw">Episode 28 - Sparse Tables and LCA</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=c5O7E_PDO4U">Sparse Table Algorithm Range Minimum Query</a></li>
+<li>
+<p><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/LCA.cpp">Códigos de ejemplo (ambos métodos)</a></p>
+</li>
+<li>
+<p>Level Ancestor:</p>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Level_ancestor_problem">https://en.wikipedia.org/wiki/Level_ancestor_problem</a></li>
+<li><a href="https://www.quora.com/Why-does-storing-log-N-pointers-work-in-the-jump-pointer-solution-of-the-level-ancestor-problem">https://www.quora.com/Why-does-storing-log-N-pointers-work-in-the-jump-pointer-solution-of-the-level-ancestor-problem</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/LA.cpp">Código de ejemplo</a></li>
+</ul>
+<h2 id="puntos-de-articulacion-aristas-de-corte-y-componentes-biconexas">Puntos de articulación, Aristas de corte y Componentes Biconexas</h2>
+<ul>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=BxAgmaLWaq4">Graph Theory: 53. Cut-Vertices</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=iGsxKUzW3cs">Graph Theory: 55. Bridges and Blocks</a></li>
+<li><a href="https://www.hackerearth.com/practice/algorithms/graphs/articulation-points-and-bridges/tutorial/">HackerEarth: Articulation Points and Bridges</a></li>
+<li><a href="https://www.hackerearth.com/practice/algorithms/graphs/biconnected-components/tutorial/">HackerEarth: Biconnected Components</a></li>
+<li>(PDF) <a href="http://web.iitd.ac.in/~bspanda/biconnectedMTL776.pdf">MTL776 Graph algorithms: Cut vertices, Cut Edges and
+Biconnected components</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=jFZsDDB0-vo">5.2 Articulation Point and Biconnected Components</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=2kREIkF9UAs">Articulation Points Graph Algorithm</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/articulation-points%2Ccut-edges%2Cbiconnected-components.cpp">Código de ejemplo</a></li>
+<li>Teoremas relevantes:</li>
+<li><strong>Menger's Theorem</strong><ul>
+<li><a href="https://en.wikipedia.org/wiki/Menger%27s_theorem">https://en.wikipedia.org/wiki/Menger%27s_theorem</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=dUAeleBMRCQ">Menger's Theorem</a></li>
+<li><a href="https://www.quora.com/How-can-I-prove-without-using-Mengers-theorem-that-any-two-vertices-of-a-2-connected-graph-lie-on-a-common-cycle">https://www.quora.com/How-can-I-prove-without-using-Mengers-theorem-that-any-two-vertices-of-a-2-connected-graph-lie-on-a-common-cycle</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="strongly-connected-components-scc">Strongly Connected Components (SCC)</h2>
+<ul>
+<li>Método 1: Tarjan's Algorithm for SCC</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=TyWtx7q2D7Y">Tarjans Strongly Connected Components algorithm | Graph Theory</a></li>
+<li>(geeksforgeeks) <a href="https://www.geeksforgeeks.org/tarjan-algorithm-find-strongly-connected-components/">Tarjan’s Algorithm to find Strongly Connected Components</a></li>
+<li>Método 2: Kosaraju's Algorithm for SCC</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=RpgcYiky7uw">Strongly Connected Components Kosaraju's Algorithm Graph Algorithm</a></li>
+<li>(geeksforgeeks) <a href="https://www.geeksforgeeks.org/strongly-connected-components/">Kosaraju's Algorithm to find Strongly Connected Components</a></li>
+<li>(cp-algorithms) <a href="https://cp-algorithms.com/graph/strongly-connected-components.html">Finding strongly connected components, Building condensation graph</a></li>
+<li>(quora) <a href="https://www.quora.com/Is-there-any-difference-or-advantages-or-disadvantages-between-Kosarajus-algorithm-and-Tarjans-algorithm-for-finding-strongly-connected-component-Which-one-is-most-useful">Diferencias entre Tarjan y Kosaraju</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/SCC.cpp">Códigos de ejemplo</a></li>
+</ul>
+<h2 id="flujo-maximo-y-aplicaciones">Flujo Máximo y aplicaciones</h2>
+<ul>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=K1i-wP82Zdo">Episode 33 - Maximum Flow Intuition</a></li>
+<li>Cuándo se usa:</li>
+<li>(<strong>MUY RECOMENDADO</strong>) <a href="https://www.youtube.com/watch?v=nKcVc8XkFSA">(youtube) Ejemplos de problemas usando flujo</a></li>
+<li><a href="http://www.geeksforgeeks.org/maximum-bipartite-matching/">geeksforgeeks: Maximum Bipartite Matching</a></li>
+<li>Ford-Fulkerson Algorithm:</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=Tl90tNtKvxs">Ford-Fulkerson in 5 minutes — Step by step example</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=XPpmzulEmjA">Residual Networks - Georgia Tech - Computability, Complexity, Theory: Algorithms</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=MczX0SM3I84">Edmonds Karp Algorithm to find the Max Flow</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=GiN3jRdgxU4">Ford Fulkerson Algorithm Edmonds Karp Algorithm For Max Flow</a></li>
+<li>Intuición detrás del grafo residual: <a href="https://cs.stackexchange.com/questions/55041/residual-graph-in-maximum-flow">cs.stackexchnge: Residual Graph in Maximum Flow
+</a></li>
+<li>Dinic Algorithm (<strong>RECOMENDADO</strong>):</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=uM06jHdIC70">CS261 Lecture 2 (Edmonds-Karp/Dinic algorithms)</a></li>
+<li>(PDF) <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15451-f14/www/lectures/lec11/dinic.pdf">CMU, 15-451 Algorithms, Fall 2014: Lecture 11: Dinic’s Algorithm</a></li>
+<li>(PDF) <a href="http://theory.stanford.edu/~tim/w16/l/l2.pdf">Stanford, CS261: A Second Course in Algorithms, Lecture #2: Augmenting Path Algorithms for Maximum Flow</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/Dinic.cpp">Código de ejemplo</a></li>
+</ul>
+<h2 id="heavy-light-decomposition">Heavy-Light Decomposition</h2>
+<ul>
+<li><a href="https://cp-algorithms.com/graph/hld.html">https://cp-algorithms.com/graph/hld.html</a></li>
+<li><a href="https://blog.anudeep2011.com/heavy-light-decomposition/">https://blog.anudeep2011.com/heavy-light-decomposition/</a></li>
+<li><a href="https://www.geeksforgeeks.org/heavy-light-decomposition-set-1-introduction/">https://www.geeksforgeeks.org/heavy-light-decomposition-set-1-introduction/</a></li>
+<li><a href="http://codeforces.com/blog/entry/22072">http://codeforces.com/blog/entry/22072</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

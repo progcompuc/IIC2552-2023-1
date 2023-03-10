@@ -1,0 +1,1262 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ProgramacionCompetitivaPUC.github.io/IIC2552-2023-1/resources/math/">
+      
+      
+        <link rel="prev" href="../strings/">
+      
+      
+        <link rel="next" href="../geometry/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+    
+    
+      
+        <title>Matemáticas - Taller de Programación Competitiva II IIC2552-2023-1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/img.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    
+        <meta property="og:title" content="Matemáticas" />
+        <meta name="twitter:title" content="Matemáticas">
+    
+
+    
+        <meta property="og:type" content="website" />
+    
+
+    
+
+    <meta property="og:url" content="https://ProgramacionCompetitivaPUC.github.io/IIC2552-2023-1/resources/math/" />
+
+    <meta property="og:image" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:site" content="@twitter_handle">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png"">
+
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#matematicas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Taller de Programación Competitiva II IIC2552-2023-1" class="md-header__button md-logo" aria-label="Taller de Programación Competitiva II IIC2552-2023-1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Taller de Programación Competitiva II IIC2552-2023-1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Matemáticas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2552-2023-1" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Taller de Programación Competitiva II IIC2552-2023-1" class="md-nav__button md-logo" aria-label="Taller de Programación Competitiva II IIC2552-2023-1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Taller de Programación Competitiva II IIC2552-2023-1
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2552-2023-1" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Información del Curso
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Información del Curso
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/introduction/" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/activities/" class="md-nav__link">
+        Cómo funciona el curso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/syllabus/" class="md-nav__link">
+        Temario
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/grading/" class="md-nav__link">
+        Cálculo de la Nota Final
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../contests/">Contests</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Contests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Recursos</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recursos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../cpp/">C++</a>
+          
+            <label for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp/cpp_osx/" class="md-nav__link">
+        Compiladores de C++ para OSX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backtracking/" class="md-nav__link">
+        Backtracking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search/" class="md-nav__link">
+        (Bi|Ter)nary Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_structures/" class="md-nav__link">
+        Data Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dp/" class="md-nav__link">
+        Dynamic Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../greedy/" class="md-nav__link">
+        Greedy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divconq/" class="md-nav__link">
+        Divide and Conquer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/" class="md-nav__link">
+        Graphs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strings/" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Mathematics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Mathematics
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numeros-primos" class="md-nav__link">
+    Números Primos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aritmetica-modular" class="md-nav__link">
+    Aritmética Modular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-exponentiation" class="md-nav__link">
+    Binary Exponentiation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conteo-y-combinatoria-modular" class="md-nav__link">
+    Conteo y Combinatoria modular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo-de-euclides" class="md-nav__link">
+    Algoritmo de Euclides
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo-de-euclides-extendido-gcdext" class="md-nav__link">
+    Algoritmo de Euclides Extendido (gcdext)
+  </a>
+  
+    <nav class="md-nav" aria-label="Algoritmo de Euclides Extendido (gcdext)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-de-euclides-extendido" class="md-nav__link">
+    Aplicaciones de Euclides Extendido
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicaciones de Euclides Extendido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modular-inverse" class="md-nav__link">
+    Modular Inverse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-diophantine-equations" class="md-nav__link">
+    Linear Diophantine Equations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-congruence-equation" class="md-nav__link">
+    Linear Congruence Equation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chinese-remainder-theorem-crt" class="md-nav__link">
+    Chinese Remainder Theorem (CRT)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lucass-theorem" class="md-nav__link">
+    Lucas's theorem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eulers-theorem-eulers-totient-function" class="md-nav__link">
+    Euler's Theorem &amp; Euler's Totient Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracion-numerica" class="md-nav__link">
+    Integración Numérica
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometry/" class="md-nav__link">
+        Geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqrtdecomp/" class="md-nav__link">
+        Square Root Decomposition
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/" class="md-nav__link">
+        Necesitas ayuda? Lee esto
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/" class="md-nav__link">
+        Tips para novat@s
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethics/" class="md-nav__link">
+        Ética e Integridad Académica
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numeros-primos" class="md-nav__link">
+    Números Primos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aritmetica-modular" class="md-nav__link">
+    Aritmética Modular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-exponentiation" class="md-nav__link">
+    Binary Exponentiation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conteo-y-combinatoria-modular" class="md-nav__link">
+    Conteo y Combinatoria modular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo-de-euclides" class="md-nav__link">
+    Algoritmo de Euclides
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo-de-euclides-extendido-gcdext" class="md-nav__link">
+    Algoritmo de Euclides Extendido (gcdext)
+  </a>
+  
+    <nav class="md-nav" aria-label="Algoritmo de Euclides Extendido (gcdext)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-de-euclides-extendido" class="md-nav__link">
+    Aplicaciones de Euclides Extendido
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicaciones de Euclides Extendido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modular-inverse" class="md-nav__link">
+    Modular Inverse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-diophantine-equations" class="md-nav__link">
+    Linear Diophantine Equations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-congruence-equation" class="md-nav__link">
+    Linear Congruence Equation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chinese-remainder-theorem-crt" class="md-nav__link">
+    Chinese Remainder Theorem (CRT)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lucass-theorem" class="md-nav__link">
+    Lucas's theorem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eulers-theorem-eulers-totient-function" class="md-nav__link">
+    Euler's Theorem &amp; Euler's Totient Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracion-numerica" class="md-nav__link">
+    Integración Numérica
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="matematicas">Matemáticas</h1>
+<h2 id="numeros-primos">Números Primos</h2>
+<ul>
+<li>¿Qué es un número primo?</li>
+<li><a href="https://www.youtube.com/watch?v=9pgA-H77BLc">What's a Prime Number?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prime_number">Wikipedia - Prime Number</a></li>
+<li>Teorema fundamental de la aritmética: todo natural tiene una única factorización prima</li>
+<li><a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic">wikipedia - Fundamenetal theorem of arithmetic</a></li>
+<li><a href="http://www.oxfordmathcenter.com/drupal7/node/165">The Fundamental Theorem of Arithmetic</a></li>
+<li><a href="https://www.youtube.com/watch?v=7sw6LdAfHgE">Number Theory - Fundamental Theorem of Arithmetic</a></li>
+<li>Tests de Primalidad (cómo saber si un número es primo):</li>
+<li><a href="https://cp-algorithms.com/algebra/primality_tests.html">CP-Algorithms: Primality tests</a></li>
+<li><a href="https://stackoverflow.com/questions/2586596/fastest-algorithm-for-primality-test">stackoverflow - Fastest algorithm for primality test</a></li>
+<li>Miller Rabin:<ul>
+<li><a href="https://cp-algorithms.com/algebra/primality_tests.html#toc-tgt-2">cp-algorithms: Miller Rabin</a></li>
+<li><a href="https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/">https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/</a></li>
+<li>deterministic variant: <a href="https://miller-rabin.appspot.com/">https://miller-rabin.appspot.com/</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/primality_test.cpp">Códigos de ejemplo</a></li>
+<li>Criba de Eratóstenes (todos los primos hasta N):</li>
+<li><a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">wikipedia: Sieve of Eratosthenes</a> (hay un GIF muy bueno)</li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=eKp56OLhoQs">Finding Prime numbers - Sieve of Eratosthenes</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=J4QCQ0dgeCI">Criba de Eratóstenes [ICPCCL 2016]</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/sieve_of_eratosthenes.cpp">Código de ejemplo</a></li>
+<li>Criba de Eratóstenes Segmentada (más rápida):</li>
+<li><a href="https://github.com/kimwalisch/primesieve/wiki/Segmented-sieve-of-Eratosthenes">https://github.com/kimwalisch/primesieve/wiki/Segmented-sieve-of-Eratosthenes</a></li>
+<li>(cp-algorithms) <a href="https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html#toc-tgt-6">Segmented sieve of eratosthenes</a></li>
+<li>(geeksforgeeks) <a href="https://www.geeksforgeeks.org/segmented-sieve-print-primes-in-a-range/">Segmented Sieve (Print Primes in a Range)</a></li>
+<li>Factorización Prima de Números Enteros:</li>
+<li><a href="https://cp-algorithms.com/algebra/factorization.html">cp-algorithms: Integer factorization</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/prime_factorization.cpp">código de ejemplo</a></li>
+<li>Factorización Prima de Factoriales:</li>
+<li><a href="http://mathforum.org/library/drmath/view/67291.html">http://mathforum.org/library/drmath/view/67291.html</a></li>
+<li><a href="https://janmr.com/blog/2010/10/prime-factors-of-factorial-numbers/">https://janmr.com/blog/2010/10/prime-factors-of-factorial-numbers/</a></li>
+<li><a href="https://forthright48.com/prime-factorization-of-factorial/">https://forthright48.com/prime-factorization-of-factorial/</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/prime_factorization.cpp">código de ejemplo</a></li>
+</ul>
+<h2 id="aritmetica-modular">Aritmética Modular</h2>
+<ul>
+<li>¿De qué se trata Aritmética Modular?</li>
+<li><a href="https://artofproblemsolving.com/wiki/index.php/Modular_arithmetic/Introduction">Art of Problem Solving: Modular Arithmetic / Introduction</a></li>
+<li>(wikipedia) <a href="https://en.wikipedia.org/wiki/Modular_arithmetic">Modular Arithmetic</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=9lUSKOjV4d0">Introduction to Modular arithmetic</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=r0gYad8auYY">High level introduction to modular arithmetic</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=B1gD6540uWA">Congruence (Modular Arithmetic) &amp; 5 Properties Explained with 7 Problems: Ultimate Shortcuts</a></li>
+<li>
+<p>(wikipedia) <a href="https://en.wikipedia.org/wiki/Modular_arithmetic#Properties">Identidades en Aritmética Modular</a></p>
+</li>
+<li>
+<p>Modular Inverse:</p>
+</li>
+<li><a href="https://cp-algorithms.com/algebra/module-inverse.html">cp-algorithms - Modular Inverse</a></li>
+<li><a href="https://www.youtube.com/watch?v=_bRVA5b4sb4">Youtube - Multiplicative inverses mod n</a></li>
+<li>Modular Exponentiation By Squaring:</li>
+<li><a href="https://en.wikipedia.org/wiki/Modular_exponentiation#Right-to-left_binary_method">https://en.wikipedia.org/wiki/Modular_exponentiation#Right-to-left_binary_method</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/binary_modular_exponentiation.cpp">https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/binary_modular_exponentiation.cpp</a></li>
+<li>Modular Fibonacci with Exponentiation by Squaring:</li>
+<li><a href="http://mathoverflow.net/questions/40816/fibonacci-series-mod-a-number">http://mathoverflow.net/questions/40816/fibonacci-series-mod-a-number</a></li>
+</ul>
+<h2 id="binary-exponentiation">Binary Exponentiation</h2>
+<ul>
+<li>(cp-algorithms) <a href="https://cp-algorithms.com/algebra/binary-exp.html">Binary Exponentiation</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/binary_modular_exponentiation.cpp">Código de ejemplo</a></li>
+</ul>
+<h2 id="conteo-y-combinatoria-modular">Conteo y Combinatoria modular</h2>
+<ul>
+<li><a href="https://comeoncodeon.wordpress.com/2011/07/31/combination/">Muy buen artículo sobre distintos métodos para calcular combinatorias</a></li>
+<li>Modular Binomial Coefficient (Choose(n,k) mod X): <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/modular_binomial_coefficient.cpp">código de ejemplo</a></li>
+<li>Modular Multinomial Coefficient: <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/modular_multinomial_coefficient.cpp">código de ejemplo</a></li>
+</ul>
+<h2 id="algoritmo-de-euclides">Algoritmo de Euclides</h2>
+<p>cómo encontrar el GCD entre dos números</p>
+<ul>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=H_2_nqKAZ5w">Euclidean Algorithm (Proof)</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=fwuj4yzoX1o">Number Theory: Euclidean Algorithm - An example</a></li>
+<li>(cp-algorithms) <a href="https://cp-algorithms.com/algebra/euclid-algorithm.html">Euclidean algorithm for computing the greatest common divisor</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=cOwyHTiW4KE">(Discrete Math 1) Euclidian Algorithm</a></li>
+<li><a href="https://forthright48.com/euclidean-algorithm">Euclidean Algorithm – Greatest Common Divisor</a></li>
+<li>(geeksforgeeks) <a href="https://www.geeksforgeeks.org/stdgcd-c-inbuilt-function-finding-gcd/">std::gcd | C++ inbuilt function for finding GCD</a></li>
+</ul>
+<p>LCM (mínimo común múltiplo): <a href="https://cp-algorithms.com/algebra/euclid-algorithm.html">https://cp-algorithms.com/algebra/euclid-algorithm.html</a> (revisar final de la página)</p>
+<h2 id="algoritmo-de-euclides-extendido-gcdext">Algoritmo de Euclides Extendido (gcdext)</h2>
+<ul>
+<li><a href="https://forthright48.com/extended-euclidean-algorithm/">https://forthright48.com/extended-euclidean-algorithm/</a></li>
+<li>(cp-algorithms) <a href="https://cp-algorithms.com/algebra/extended-euclid-algorithm.html">Extended Euclidean Algorithm</a></li>
+<li>(math.stackexchange) <a href="https://math.stackexchange.com/questions/37806/extended-euclidean-algorithm-with-negative-numbers">gcdext con números negativos?</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=k47fkSULGr0">Algoritmo de Euclides [ICPCCL 2016]</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=hB34-GSDT3k">The Extended Euclidean algorithm</a></li>
+<li>
+<p><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/euclidean_algorithm.cpp">código de ejemplo</a></p>
+</li>
+<li>
+<h3 id="aplicaciones-de-euclides-extendido">Aplicaciones de Euclides Extendido</h3>
+</li>
+<li>
+<h4 id="modular-inverse">Modular Inverse</h4>
+<ul>
+<li>(cp-algorithms) <a href="https://cp-algorithms.com/algebra/module-inverse.html">modular inverse</a></li>
+</ul>
+</li>
+<li>
+<h4 id="linear-diophantine-equations">Linear Diophantine Equations</h4>
+<ul>
+<li>(cp-algorithms) <a href="https://cp-algorithms.com/algebra/linear-diophantine-equation.html">linear dophantine equation</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=TIk3ujphMfk">N1--Introduction to Linear Diophantine Equations</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=5DcoG69NyO0">N2--Solve Basic Linear Diophantine Equation</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=FjliV5u2IVw">Number Theory: Diophantine Equation: ax+by=gcd(a,b)</a></li>
+<li>(PDF) <a href="http://gauss.math.luc.edu/greicius/Math201/Fall2012/Lectures/linear-diophantine.article.pdf">http://gauss.math.luc.edu/greicius/Math201/Fall2012/Lectures/linear-diophantine.article.pdf</a></li>
+<li><a href="http://mathonline.wikidot.com/solutions-to-linear-diophantine-equations">http://mathonline.wikidot.com/solutions-to-linear-diophantine-equations</a></li>
+</ul>
+</li>
+<li>
+<h4 id="linear-congruence-equation">Linear Congruence Equation</h4>
+<ul>
+<li>(cp-algorithms) <a href="https://cp-algorithms.com/algebra/linear_congruence_equation.html">Linear Congruence Equation</a></li>
+<li>(PDF) <a href="http://gauss.math.luc.edu/greicius/Math201/Fall2012/Lectures/linear-congruences.article.pdf">http://gauss.math.luc.edu/greicius/Math201/Fall2012/Lectures/linear-congruences.article.pdf</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/euclidean_algorithm.cpp">Códigos de ejemplos</a></li>
+</ul>
+<h2 id="chinese-remainder-theorem-crt">Chinese Remainder Theorem (CRT)</h2>
+<ul>
+<li>(codeforces) <a href="https://codeforces.com/blog/entry/61290">[Tutorial] Chinese Remainder Theorem</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=ru7mWZJlRQg">The Chinese Remainder Theorem made easy</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=zIFehsBHB8o">Chinese Remainder Theorem</a></li>
+<li><a href="https://forthright48.com/chinese-remainder-theorem-part-1-coprime-moduli/">Chinese Remainder Theorem Part 1 – Coprime Moduli</a></li>
+<li><a href="https://forthright48.com/chinese-remainder-theorem-part-2-non-coprime-moduli">Chinese Remainder Theorem Part 2 – Non Coprime Moduli</a></li>
+<li><a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Mathematics/chinese_remainder_theorem.cpp">código de ejemplo</a></li>
+</ul>
+<h2 id="lucass-theorem">Lucas's theorem</h2>
+<ul>
+<li><a href="https://en.m.wikipedia.org/wiki/Lucas%27s_theorem">wikipedia - Lucas's theorem</a></li>
+<li><a href="https://math.stackexchange.com/questions/95491/n-choose-k-bmod-m-using-chinese-remainder-theorem">choose(n,k) mod M using Chinese remainder theorem?</a>  </li>
+</ul>
+<h2 id="eulers-theorem-eulers-totient-function">Euler's Theorem &amp; Euler's Totient Function</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Euler%27s_theorem">wikipedia - Euler's Theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Euler%27s_totient_function">wikipedia - Euler's Totient Function</a></li>
+<li><a href="https://cp-algorithms.com/algebra/phi-function.html">cp-algorithms: Euler's Totient Function</a></li>
+</ul>
+<h2 id="integracion-numerica">Integración Numérica</h2>
+<ul>
+<li>(Wikipedia) <a href="https://en.wikipedia.org/wiki/Numerical_integration">https://en.wikipedia.org/wiki/Numerical_integration</a></li>
+<li>(Codeforces <a href="https://codeforces.com/blog/entry/8242">Tasks involving numerical integration</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=uc4xJsi99bk">Explanation of Simpson's rule | MIT 18.01SC Single Variable Calculus, Fall 2010</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=7EqRRuh-5Lk">Simpson's Rule &amp; Numerical Integration</a></li>
+<li>(youtube) <a href="https://www.youtube.com/watch?v=RTX-ik_8i-k">Numerical Integration With Trapezoidal and Simpson's Rule</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

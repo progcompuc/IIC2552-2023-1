@@ -1,0 +1,10 @@
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reloj-aritmetica-modular {
+    width: 300px;
+    height: 300px;
+}
