@@ -1,27 +1,16 @@
-site_name: Taller de Programación Competitiva II IIC255X-202Y-Z
-repo_url: https://github.com/ProgramacionCompetitivaPUC/IIC255X-202Y-Z
-site_url: https://ProgramacionCompetitivaPUC.github.io/IIC255X-202Y-Z/
+site_name: Taller de Programación Competitiva II IIC2552-2023-1
+repo_url: https://github.com/ProgramacionCompetitivaPUC/IIC2552-2023-1
+site_url: https://ProgramacionCompetitivaPUC.github.io/IIC2552-2023-1/
 edit_uri: ""
 nav:
   - Home: index.md
   - Información del Curso:
       - Introducción: about/introduction.md
-      - Cómo funciona el curso: about/how_course_works.md
+      - Cómo funciona el curso: about/activities.md
       - Temario: about/syllabus.md
       - Cálculo de la Nota Final: about/grading.md
-  - Apuntes:
-      - Strings:
-          - Rolling Hashing: notes/strings/rolling_hashing.md
-          - Trie String: notes/strings/trie_string.md
-          - KMP: notes/strings/kmp.md
-      - Geometría:
-          - Implementación base: notes/geometry/base_implementation.md
-          - Producto punto y producto cruz: notes/geometry/dot_and_cross_product.md
-      - Matemáticas:
-          - Aritmética modular: notes/math/modular_arithmetic.md
   - Contests:
       - contests/index.md
-      - Contest 1: contests/hints/contest1.md
   - Recursos:
       - resources/index.md
       - C++:

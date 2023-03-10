@@ -69,6 +69,6 @@ Existen muchos sitios online que organizan competencias individuales cada cierto
 - Al final de la competencia avisarnos en qué competencia participaste y mandar el link al ranking donde quedaste.
 - El bonus se calculará como $3 \cdot \frac{X}{N}$ décimas, donde $X =$ cantidad de problemas resueltos por ti, $N =$ cantidad de problemas resueltos por la persona que quedó en primer lugar. Las $3 \cdot \frac{X}{N}$ décimas obtenidas se sumarán a tus décimas de bonus.
 
-### 3.4) SUPER BONUS Codeforces
+### 3.4) BONUS PROHIBIDO Codeforces
 
-[Codeforces](https://codeforces.com/) tiene un sistema de [rating](https://codeforces.com/ratings/country/Chile) parecido al ELO en Ajedrez. Cualquier alumn@ que participe en **al menos 3 contests** de Codeforces durante el semestre y luego de ello alcance un **rating de 1700 o superior**, automáticamente tendrá **nota final 7.0 en el curso**.
+[Codeforces](https://codeforces.com/) tiene un sistema de [rating](https://codeforces.com/ratings/country/Chile) parecido al ELO en Ajedrez. Cualquier alumn que participe en **al menos 3 contests** de Codeforces durante el semestre y luego de ello alcance un **rating de 1200 o superior**, puedes reclamar un bonus de $\frac{\textsf{rating_alcanzado} - 1200}{10}$ décimas a la **nota final** del curso. Por ejemplo, si participas en tres contests durante el semestre y logras un rating de 1350, tienes automáticamente 1,5 puntos extra a la nota final.

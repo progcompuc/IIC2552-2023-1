@@ -2,45 +2,35 @@
 title: Temario
 ---
 
-# Temario
+# Temario **tentativo**
 
-## [Estructuras de Datos](../../../resources/data_structures) (4 semanas)
+## Introducción a la Programación Competitiva (2 semanas)
 
-- Estructuras de datos en C++ STL (para llegar y usar)
-- Sparse Tables
-- Segment Tree
-- Segment Tree Lazy
-- Fenwick Tree
-- Fenwick Tree 2D
-- Union Find
+- Introducción a Complejidad Computacional
+- Problemas fáciles e introductorios de implementación
 
-## [Algoritmos de Grafos](../../resources/graphs) (3 semanas)
+## Búsqueda Binaria y Ternaria (2 semanas)
 
-- MST (minimun spanning tree)
-- LCA (lowest common ancestor)
-- Puntos de Articulación, Aristas de Corte y Componentes Biconexas
-- SCC (strongly connected components)
-- Flujo máximo y aplicaciones
+## Fuerza Bruta y Backtracking (1 semana)
 
-## [Algoritmos de Strings](../resources/strings) (2 semanas)
+## Problemas Interactivos (1 semanas)
 
-- Trie
-- Suffix Array
-- Suffix Automaton (?)
-- Rolling Hashing
-- KMP (Knuth Morris Pratt)
+## Programación Dinámica (2 semanas)
 
-## [Geometría](../../resources/geometry) (1 o 2 semanas)
+## Algoritmos Codiciosos (1 semana)
 
-- Producto punto y producto cruz
-- Cálculo de áreas
-- Convex Hull
-- Sweep Lines
+## Introducción a Grafos (2 semana)
 
-## Repaso de temas varios vistos el primer semestre
+- Conceptos básicos: grafos dirigidos, no dirigido, árboles.
+- Cómo representar grafos en código.
+- Recorriendo grafos: DFS y BFS.
+- Camino más corto: Dijkstra, Bellman-Ford y Floyd-Warshall
 
-- [Binary & Ternary Search](../../resources/search)
-- [Backtracking](../../resources/backtracking)
-- [DP (programación dinámica)](../../resources/dp)
-- [Grafos básico (BFS/DFS/camino más corto)](../../resources/graphs)
-- [Matemática](../../resources/math)
+## Matemáticas y Teoría de Números (resto del semestre)
+
+- Números primos
+- Aritmética modular
+- Exponenciación binaria
+- Conteo y combinatoria
+- Teorema del resto chino
+

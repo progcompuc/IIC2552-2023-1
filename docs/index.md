@@ -8,17 +8,17 @@ description: "Información Básica sobre el ramo Taller de Programación Competi
 
 ### Clases
 
-Horario: 14:00-18:30
+Horario: 14:00-18:20
 
 Sala Javier Pinto, DCC (4to piso Edificio San Agustín, el primero a mano derecha desde el metro)
 
 ### Profesor
 
-{ Nombre del profesor } (<correo@uc.cl>)
+Martín Muñoz (<mmunos@uc.cl>)
 
 ### Ayudante
 
-{ Nombre del ayudante } (<correo@uc.cl>)
+Benjamín Rubio (<berubio@uc.cl>)
 
 ### Telegram del curso (medio oficial de comunicación)
 
