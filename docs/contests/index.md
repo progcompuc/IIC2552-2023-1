@@ -156,11 +156,11 @@ Mayo 26, 14 días, [link a **contest**](https://vjudge.net/contest/560537)
 **Tópicos**: Problemas Interactivos
 **Puntos**:
 
-| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` | `I` | `J` |
-| --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  2  |  2  |  2  |  3  |  3  |  4  |  2  |  4  |
 
-**Puntaje Mínimo Esperado**: -
+**Puntaje Mínimo Esperado**: 5
 
 **Hints** y **códigos de ejemplo**: Pronto.
 
