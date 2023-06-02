@@ -140,11 +140,11 @@ Mayo 19, 14 días, [link a **contest**](https://vjudge.net/contest/559567)
 **Tópicos**: Greedy o programación dinámica (o ninguna)
 **Puntos**:
 
-| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` | `I` | `J` |
-| --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` | `I` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  2  |  3  |  2  |  3  |  3  |  2  |  2  |  3  |  4  |
 
-**Puntaje Mínimo Esperado**: -
+**Puntaje Mínimo Esperado**: 4
 
 **Hints** y **códigos de ejemplo**: Pronto.
 
