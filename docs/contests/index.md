@@ -126,9 +126,9 @@ Mayo 12, 14 días, [link a **contest**](https://vjudge.net/contest/558403)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` | `I` | `J` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |
+| Puntaje   |  2  |  2  |  4  |  2  |  4  |  4  |  3  |  4  |  4  |  3  |
 
-**Puntaje Mínimo Esperado**: -
+**Puntaje Mínimo Esperado**: 5
 
 **Hints** y **códigos de ejemplo**: Pronto.
 
@@ -154,6 +154,22 @@ Mayo 19, 14 días, [link a **contest**](https://vjudge.net/contest/559567)
 Mayo 26, 14 días, [link a **contest**](https://vjudge.net/contest/560537)
 
 **Tópicos**: Problemas Interactivos
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` | `I` | `J` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |
+
+**Puntaje Mínimo Esperado**: -
+
+**Hints** y **códigos de ejemplo**: Pronto.
+
+
+## Contest 11
+
+Junio 02, 14 días, [link a **contest**](https://vjudge.net/contest/561735)
+
+**Tópicos**: Grafos I
 **Puntos**:
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` | `I` | `J` |
