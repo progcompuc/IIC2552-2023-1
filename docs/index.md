@@ -27,3 +27,8 @@ Benjamín Rubio (<berubio@uc.cl>)
 ### Spreadsheet de notas y asistencia
 
 [Ver spreadsheet :material-google-spreadsheet:](https://docs.google.com/spreadsheets/d/1ioERtF_ZxN1g8T1P7kLeBK4DbwcEaAGn_BZS6oKvpiE){ .md-button .md-button--primary }
+
+### Canal Programación Competitiva UC
+
+[@progcompcl :fontawesome-brands-instagram:](https://www.instagram.com/progcompuc/){ .md-button .md-button--primary }
+
