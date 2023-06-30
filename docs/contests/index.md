@@ -66,8 +66,6 @@ Marzo 31, 21 días, [link a **contest**](https://vjudge.net/contest/551141)
 
 **Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: Pronto.
-
 
 ## Contest 5
 
@@ -81,8 +79,6 @@ Abril 14, 14 días, [link a **contest**](https://vjudge.net/contest/553684)
 | Puntaje   |  4  |  3  |  3  |  3  |  4  |  3  |  3  |  4  |  5  |
 
 **Puntaje Mínimo Esperado**: 5
-
-**Hints** y **códigos de ejemplo**: Pronto.
 
 
 ## Contest 6
@@ -98,8 +94,6 @@ Abril 21, 21 días, [link a **contest**](https://vjudge.net/contest/554753)
 
 **Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: Pronto.
-
 
 ## Contest 7
 
@@ -113,8 +107,6 @@ Abril 28, 21 días, [link a **contest**](https://vjudge.net/contest/555763)
 | Puntaje   |  2  |  2  |  3  |  2  |  2  |  3  |  3  |  3  |  4  |  4  |
 
 **Puntaje Mínimo Esperado**: 6
-
-**Hints** y **códigos de ejemplo**: Pronto.
 
 
 ## Contest 8
@@ -130,8 +122,6 @@ Mayo 12, 14 días, [link a **contest**](https://vjudge.net/contest/558403)
 
 **Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: Pronto.
-
 
 ## Contest 9
 
@@ -145,8 +135,6 @@ Mayo 19, 14 días, [link a **contest**](https://vjudge.net/contest/559567)
 | Puntaje   |  2  |  3  |  2  |  3  |  3  |  2  |  2  |  3  |  4  |
 
 **Puntaje Mínimo Esperado**: 4
-
-**Hints** y **códigos de ejemplo**: Pronto.
 
 
 ## Contest 10
@@ -162,8 +150,6 @@ Mayo 26, 14 días, [link a **contest**](https://vjudge.net/contest/560537)
 
 **Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: Pronto.
-
 
 ## Contest 11
 
@@ -177,8 +163,6 @@ Junio 02, 21 días, [link a **contest**](https://vjudge.net/contest/561735)
 | Puntaje   |  2  |  2  |  3  |  3  |  4  |  4  |  4  |  3  |  4  |  3  |
 
 **Puntaje Mínimo Esperado**: 5
-
-**Hints** y **códigos de ejemplo**: Pronto.
 
 
 ## Contest 12
@@ -194,8 +178,6 @@ Junio 09, 21 días, [link a **contest**](https://vjudge.net/contest/562863)
 
 **Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: Pronto.
-
 ## Contest 13
 
 Junio 23, 14 días, [link a **contest**](https://vjudge.net/contest/564729)
@@ -209,4 +191,15 @@ Junio 23, 14 días, [link a **contest**](https://vjudge.net/contest/564729)
 
 **Puntaje Mínimo Esperado**: .
 
-**Hints** y **códigos de ejemplo**: Pronto.
+## Contest 14
+
+Junio 23, 14 días, [link a **contest**](https://vjudge.net/contest/565804)
+
+**Tópicos**: Popurrí
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |
+
+**Puntaje Mínimo Esperado**: .
