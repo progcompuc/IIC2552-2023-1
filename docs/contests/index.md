@@ -187,9 +187,9 @@ Junio 23, 14 días, [link a **contest**](https://vjudge.net/contest/564729)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |
+| Puntaje   |  2  |  2  |  2  |  2  |  2  |  3  |  4  |  2  |
 
-**Puntaje Mínimo Esperado**: .
+**Puntaje Mínimo Esperado**: 5
 
 ## Contest 14
 
@@ -202,4 +202,4 @@ Junio 23, 14 días, [link a **contest**](https://vjudge.net/contest/565804)
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Puntaje   |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |
 
-**Puntaje Mínimo Esperado**: .
+**Puntaje Mínimo Esperado**: 0
