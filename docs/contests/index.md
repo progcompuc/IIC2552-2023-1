@@ -198,8 +198,8 @@ Junio 23, 14 días, [link a **contest**](https://vjudge.net/contest/565804)
 **Tópicos**: Popurrí
 **Puntos**:
 
-| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
-| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  X  |  X  |  X  |  X  |  X  |  X  |  X  |  X  |
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` | `I` | `J` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  3  |  3  |  3  |  2  |  3  |  3  |  4  |  5  |  6  |  7  |
 
 **Puntaje Mínimo Esperado**: 0
